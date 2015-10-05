@@ -24,7 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = @"CalenderController";
+    self.title = @"Calender";
     
     [CalendarManeger shareCalendarManeger];
     [self setButtonAppearance];

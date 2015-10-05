@@ -32,13 +32,8 @@
     [self initialNavigateBar];
     
     [self initialDatePicker];
-
     
-    self.startDateTextField.inputView = self.datePicker;
-    self.endDateTextField.inputView = self.datePicker;
-    
-    self.startDateTextField.delegate = self;
-    self.endDateTextField.delegate = self;
+    [self initialDateTextField];
     
 }
 
@@ -46,17 +41,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 
 - (void)initialDatePicker
 {
@@ -77,6 +61,32 @@
     self.navigationItem.rightBarButtonItem = rightBarButtonItem;
     
     self.title = @"Edit";
+}
+
+- (void)initialDateTextField
+{
+    self.startDateTextField.inputView = self.datePicker;
+    self.endDateTextField.inputView = self.datePicker;
+    
+    self.startDateTextField.delegate = self;
+    self.endDateTextField.delegate = self;
+    
+    [self settingStartEndDate];
+}
+
+- (void)settingStartEndDate
+{
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm"];
+    
+    NSDate *date = [NSDate date];
+    NSDate *endDate = [date dateByAddingTimeInterval:60*60];
+    
+    NSString *startDateString = [dateFormatter stringFromDate:date];
+    NSString *endDateString = [dateFormatter stringFromDate:endDate];
+    
+    self.startDateTextField.text = startDateString;
+    self.endDateTextField.text = endDateString;
 }
 
 
@@ -156,10 +166,16 @@
 {
     if (textField == self.startDateTextField) {
         self.isStartDate = YES;
+        
+        NSDate *currentDate = [self convertDateStringToNSDate:self.startDateTextField.text];
+        [self.datePicker setDate:currentDate];
+    } else {
+        
+        NSDate *currentEndDate = [self convertDateStringToNSDate:self.endDateTextField.text];
+        [self.datePicker setDate:currentEndDate];
     }
     
-    NSString *nowTime = [self converNSDateToString:self.datePicker.date];
-    textField.text = nowTime;
+    textField.textColor = [UIColor redColor];
 }
 
 - (void)textFieldDidEndEditing:(UITextField *)textField
@@ -167,6 +183,8 @@
     if (textField == self.startDateTextField) {
         self.isStartDate = NO;
     }
+    
+    textField.textColor = [UIColor blackColor];
 }
 
 #pragma mark - check method
@@ -208,7 +226,6 @@
         self.endDateTextField.text = date;
     }
 }
-
 
 #pragma mark - converDate
 
