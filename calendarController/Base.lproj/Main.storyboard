@@ -36,7 +36,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Saa-cH-ejq">
                                 <rect key="frame" x="189" y="122" width="222" height="30"/>
-                                <color key="backgroundColor" red="0.79187998400000004" green="1" blue="0.58926476549999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.41133776151718526" green="1" blue="0.26973015217582141" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title=" Create new event use Event UI  ">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -46,7 +46,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zg7-6v-KfR">
                                 <rect key="frame" x="185" y="174" width="230" height="30"/>
-                                <color key="backgroundColor" red="0.98975864010000003" green="1" blue="0.7487174835" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="1" green="0.98578018394631306" blue="0.43798542491631831" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title=" Create new event use Event API  ">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -56,7 +56,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dhJ-EG-ioY">
                                 <rect key="frame" x="182" y="224" width="236" height="30"/>
-                                <color key="backgroundColor" red="0.91654460758806711" green="0.78641433254545157" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.87246269010015076" green="0.73558125434033328" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title=" Create new event use Custom UI  ">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -65,7 +65,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.89803921568627454" green="1" blue="0.81960784313725488" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Zg7-6v-KfR" firstAttribute="top" secondItem="Saa-cH-ejq" secondAttribute="bottom" constant="22" id="KMN-20-h7k"/>
                             <constraint firstAttribute="centerX" secondItem="Saa-cH-ejq" secondAttribute="centerX" id="PI2-2V-tfK"/>
@@ -97,26 +97,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Title" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C24-6K-eqi">
-                                <rect key="frame" x="20" y="70" width="560" height="24"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C24-6K-eqi">
+                                <rect key="frame" x="20" y="59" width="560" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Location" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lv3-F3-5X1">
-                                <rect key="frame" x="20" y="97" width="560" height="24"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Location" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lv3-F3-5X1">
+                                <rect key="frame" x="20" y="93" width="560" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="StartDate yyyy-MM-dd HH:mm:ss" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cce-jr-ygh">
-                                <rect key="frame" x="20" y="278" width="560" height="24"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="StartDate yyyy-MM-dd HH:mm:ss" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cce-jr-ygh">
+                                <rect key="frame" x="20" y="278" width="560" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Notes:Xcode 7 UITextView fail. Default text is less than 10 characters. ViewController will fail to load. No error, Just hangs." translatesAutoresizingMaskIntoConstraints="NO" id="f1r-cB-A19">
-                                <rect key="frame" x="20" y="128" width="560" height="128"/>
+                                <rect key="frame" x="20" y="132" width="560" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="38o-bS-FvI"/>
@@ -125,8 +125,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="EndDate yyyy-MM-dd HH:mm:ss" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rgG-BZ-cyH">
-                                <rect key="frame" x="20" y="315" width="560" height="24"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="EndDate yyyy-MM-dd HH:mm:ss" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rgG-BZ-cyH">
+                                <rect key="frame" x="20" y="315" width="560" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -135,17 +135,17 @@
                         <color key="backgroundColor" red="0.89628005092103702" green="1" blue="0.81858728527020275" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="rgG-BZ-cyH" secondAttribute="centerX" id="0N3-Fe-B3D"/>
-                            <constraint firstItem="C24-6K-eqi" firstAttribute="top" secondItem="j3p-Tn-qe4" secondAttribute="bottom" constant="50" id="3lq-OZ-pU0"/>
-                            <constraint firstItem="f1r-cB-A19" firstAttribute="top" secondItem="lv3-F3-5X1" secondAttribute="bottom" constant="7" id="4Uq-IC-ccj"/>
-                            <constraint firstItem="lv3-F3-5X1" firstAttribute="top" secondItem="C24-6K-eqi" secondAttribute="bottom" constant="3" id="6ox-lP-bhM"/>
+                            <constraint firstItem="C24-6K-eqi" firstAttribute="top" secondItem="j3p-Tn-qe4" secondAttribute="bottom" constant="39" id="3lq-OZ-pU0"/>
+                            <constraint firstItem="f1r-cB-A19" firstAttribute="top" secondItem="lv3-F3-5X1" secondAttribute="bottom" constant="9" id="4Uq-IC-ccj"/>
+                            <constraint firstItem="lv3-F3-5X1" firstAttribute="top" secondItem="C24-6K-eqi" secondAttribute="bottom" constant="4" id="6ox-lP-bhM"/>
                             <constraint firstItem="f1r-cB-A19" firstAttribute="leading" secondItem="1dh-2V-KJi" secondAttribute="leadingMargin" id="8uG-1f-FSZ"/>
                             <constraint firstAttribute="centerX" secondItem="C24-6K-eqi" secondAttribute="centerX" id="Dn3-Pa-bug"/>
                             <constraint firstItem="f1r-cB-A19" firstAttribute="leading" secondItem="rgG-BZ-cyH" secondAttribute="leading" id="EJe-ut-Gqt"/>
-                            <constraint firstItem="rgG-BZ-cyH" firstAttribute="top" secondItem="Cce-jr-ygh" secondAttribute="bottom" constant="13" id="MNS-Oa-RTa"/>
+                            <constraint firstItem="rgG-BZ-cyH" firstAttribute="top" secondItem="Cce-jr-ygh" secondAttribute="bottom" constant="7" id="MNS-Oa-RTa"/>
                             <constraint firstItem="f1r-cB-A19" firstAttribute="leading" secondItem="Cce-jr-ygh" secondAttribute="leading" id="RBT-2g-ybf"/>
                             <constraint firstAttribute="centerX" secondItem="f1r-cB-A19" secondAttribute="centerX" id="VRH-yZ-B7n"/>
                             <constraint firstAttribute="centerX" secondItem="Cce-jr-ygh" secondAttribute="centerX" id="gIU-Po-1Hg"/>
-                            <constraint firstItem="Cce-jr-ygh" firstAttribute="top" secondItem="f1r-cB-A19" secondAttribute="bottom" constant="22" id="kUu-vw-fvK"/>
+                            <constraint firstItem="Cce-jr-ygh" firstAttribute="top" secondItem="f1r-cB-A19" secondAttribute="bottom" constant="18" id="kUu-vw-fvK"/>
                             <constraint firstItem="f1r-cB-A19" firstAttribute="leading" secondItem="C24-6K-eqi" secondAttribute="leading" id="kzk-ac-ihZ"/>
                             <constraint firstItem="f1r-cB-A19" firstAttribute="leading" secondItem="lv3-F3-5X1" secondAttribute="leading" id="oYb-gH-b2d"/>
                             <constraint firstAttribute="centerX" secondItem="lv3-F3-5X1" secondAttribute="centerX" id="prn-ck-b0W"/>

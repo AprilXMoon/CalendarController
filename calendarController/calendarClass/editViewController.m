@@ -28,12 +28,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.notesTextView.delegate = self;
     [self initialNavigateBar];
-    
     [self initialDatePicker];
-    
     [self initialDateTextField];
+    [self initialNotesTextView];
     
 }
 
@@ -61,6 +59,15 @@
     self.navigationItem.rightBarButtonItem = rightBarButtonItem;
     
     self.title = @"Edit";
+}
+
+- (void)initialNotesTextView
+{
+    self.notesTextView.delegate = self;
+    
+    self.notesTextView.layer.cornerRadius = 5.0;
+    self.notesTextView.layer.borderWidth = 1.0;
+    self.notesTextView.layer.borderColor = [UIColor colorWithWhite:0.904 alpha:1.000].CGColor;
 }
 
 - (void)initialDateTextField
