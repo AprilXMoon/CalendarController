@@ -86,14 +86,14 @@
 {
     NSLog(@"doneAddNewEvent");
     
-    if ([self checkEndDate]) {
+    if ([self checkTitleIsEmpty]) {
+        [self showAlertViewWithTitle:@"No Title" Message:@"Please enter the event title."];
         
-        UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Date Fail" message:@"The start date must be before the end date." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-        [message show];
+    } else if ([self checkEndDate]) {
+        [self showAlertViewWithTitle:@"Date Fail" Message:@"The start date must be before the end date."];
         
     } else {
         [self insertEventToCalendar];
-        
         [self.navigationController popViewControllerAnimated:YES];
     }
 }
@@ -169,6 +169,17 @@
     }
 }
 
+#pragma mark - check method
+
+- (BOOL)checkTitleIsEmpty
+{
+    NSString *EventTitle = self.titleTextField.text;
+    if (EventTitle.length == 0) {
+        return true;
+    }
+    return false;
+}
+
 - (BOOL)checkEndDate
 {
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
@@ -184,8 +195,6 @@
     
     return false;
 }
-
-
 
 #pragma mark - Date Picker
 
@@ -221,6 +230,14 @@
     NSString *dateString = [dateFormatter stringFromDate:self.datePicker.date];
     
     return dateString;
+}
+
+#pragma mark - AlertView
+
+- (void)showAlertViewWithTitle:(NSString *)title Message:(NSString *)message
+{
+    UIAlertView *AlertMsg = [[UIAlertView alloc] initWithTitle:title message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [AlertMsg show];
 }
 
 @end
