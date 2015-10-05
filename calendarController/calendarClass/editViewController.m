@@ -86,9 +86,16 @@
 {
     NSLog(@"doneAddNewEvent");
     
-    [self insertEventToCalendar];
-    
-    [self.navigationController popViewControllerAnimated:YES];
+    if ([self checkEndDate]) {
+        
+        UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Date Fail" message:@"The start date must be before the end date." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [message show];
+        
+    } else {
+        [self insertEventToCalendar];
+        
+        [self.navigationController popViewControllerAnimated:YES];
+    }
 }
 
 - (void)insertEventToCalendar
@@ -125,7 +132,7 @@
 #pragma mark - textView Delegate
 - (BOOL)textViewShouldBeginEditing:(UITextView *)textView
 {
-    if ([self.notesTextView.text isEqualToString:@"Notes"]) {
+    if ([self.notesTextView.text rangeOfString:@"Xcode 7 UITextView fail."].location != NSNotFound) {
         self.notesTextView.text = @"";
         self.notesTextView.textColor = [UIColor blackColor];
     }
@@ -159,12 +166,10 @@
 {
     if (textField == self.startDateTextField) {
         self.isStartDate = NO;
-    } else {
-        [self checkEndDate];
     }
 }
 
-- (void)checkEndDate
+- (BOOL)checkEndDate
 {
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm"];
@@ -174,7 +179,10 @@
     
     if ([endDate compare:startDate] == NSOrderedAscending) {
         self.endDateTextField.textColor = [UIColor redColor];
+        return true;
     }
+    
+    return false;
 }
 
 
